@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 
-server "", :web, :app, :db, primary: true
+server "5.135.145.148", :web, :app, :db, primary: true
 
 set :application, "hedy"
 set :user, "root"
@@ -9,7 +9,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 
-set :repository,  "git@github:SlimBN/#{application}.git"
+set :repository,  "git@github.com:SlimBN/#{application}.git"
 set :branch, "master"
 set :scm, "git"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -25,7 +25,7 @@ ssh_options[:forward_agent] = true
 after "deploy", "deploy:cleanup"
 
 namespace :deploy do
-	%[start stop restart].each do |command|
+	%w[start stop restart].each do |command|
 		desc "#{command} unicorn server"
 		task command, roles: :app, except: {no_release: true} do
 			run "/etc/init.d/unicorn_#{application} #{command}"
