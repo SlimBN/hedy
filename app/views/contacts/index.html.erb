@@ -1,0 +1,24 @@
+ <div class="content-inner-left">
+
+        <form action="/contacts" method="post" class="form contactForm" id="contactForm" style="margin-bottom:0;" novalidate="novalidate">
+<!--           <%= form_for(Contact.new, class: "form contactForm", style: "margin-bottom:0;") do |contact| %> -->
+          <p>
+            <input type="text" class="required text-field"  id="contact_name" name="contact[name]" placeholder="Votre Nom" required="required" />
+          </p>
+
+          <p>
+            <input type="text" class="required text-field"  id="contact_surname" name="contact[surname]" placeholder="Votre Prénom" required="required" />
+          </p>
+
+          <p>
+            <input type="text" class="required text-field"  id="contact_email" name="contact[email]" placeholder="Email" required="required" />
+          </p>
+
+          <textarea class="required" id="contact_message" name="contact[message]" rows="32" cols="8" placeholder="Le message que vous desirez convoyer..." required="required"></textarea>
+
+
+          <p style="float:left; clear:both; margin-top:10px;"><input type="submit" class="submit submitTheme submitForm" id="submitComment" value="Envoyer Le Message" /></p>
+<!--           <% end %> -->
+        </form>
+
+</div>

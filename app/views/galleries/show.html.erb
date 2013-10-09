@@ -1,0 +1,29 @@
+
+   <!--start content-->
+    <div id="content-wrapper">
+    
+        <section class="pages clearfix">        
+        
+            <!--start section title-->
+            <div id="section-title">
+                <h1><%= @gallery.title %></h1>
+            </div>
+
+            
+            <!--start content left-->
+            <div class="content-inner-left">
+              
+
+<div id="gallery_image_show">
+  <%= image_tag @gallery.picture %>
+</div>
+  
+<div class="blog-post-meta">
+  <%= @gallery.created_at %> | Rédigé par: <a href="#">Hedy Aounallah Thion</a>
+</div>
+
+<div id="gallery_image_show_description">
+  <%= @gallery.description %>
+</div>
+
+

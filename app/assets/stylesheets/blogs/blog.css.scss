@@ -1,0 +1,41 @@
+#blog_page {
+	width: 1000px;
+
+	text-align: left;
+
+	#blog {
+		width: 1000px;
+
+		padding: 20px;
+
+		border-radius: 3px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+
+		background-color: #FAFAFA;
+
+		.cover {
+
+			border-radius: 3px;
+
+			img {
+				border-radius: 3px;
+			}
+		}
+
+		.title {
+			font-family: 'photograph';
+			font-size: 20px;
+		}
+
+		.user {
+			margin-bottom: 10px;
+		}
+
+		.content {
+			font-family: "linowrite";
+			font-size: 20px;
+			line-height: 25px;
+		}
+
+	}
+}

@@ -1,0 +1,67 @@
+#video {
+	margin-bottom: 20px;
+	.title {
+		height: 50px;
+
+		a {
+			color: #000;
+
+			&:hover {
+				color: #000;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.credits {
+				height: 30px;
+
+				vertical-align: middle;
+		position: relative;
+
+		height: 30px;
+
+		.time {
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+
+				vertical-align: middle;
+		}
+
+		.where {
+			position: absolute;
+			top: 0px;
+			right: 40px;
+
+			height: 30px;
+			line-height: 30px;
+			vertical-align: middle;
+		}
+
+		.share {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+
+			height: 30px;
+
+			img {
+				height: 30px;
+
+				vertical-align: middle;
+			}
+		}
+
+		.description {
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+			font-family: 16px;
+		}
+
+		.comments {
+			margin-top: 20px;
+		}
+	}
+}

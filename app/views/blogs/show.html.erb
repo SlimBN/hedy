@@ -1,0 +1,33 @@
+
+   <!--start content-->
+    <div id="content-wrapper">
+    
+        <section class="pages clearfix">        
+        
+            <!--start section title-->
+            <div id="section-title">
+                <h1><%= @blog.title %></h1>
+            </div>
+
+            
+            <!--start content left-->
+            <div class="content-inner-left">
+    
+    <div class="cover">
+      <%= image_tag @blog.cover_url(:blog).to_s %>
+    </div>
+
+
+    <div class="user">
+      <%= @blog.user.username %> l'a publié le <%= @blog.created_at %>
+    </div>
+
+    <div class="content">
+      <%= @blog.content %>
+    </div>
+
+
+  </div>
+
+
+</div>

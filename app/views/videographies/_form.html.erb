@@ -1,0 +1,41 @@
+<%= form_for(@videography) do |f| %>
+  <% if @videography.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@videography.errors.count, "error") %> prohibited this videography from being saved:</h2>
+
+      <ul>
+      <% @videography.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :embed %><br />
+    <%= f.text_area :embed %>
+  </div>
+  <div class="field">
+    <%= f.label :code %><br />
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :ayna %><br />
+    <%= f.text_field :ayna %>
+  </div>
+  <div class="field">
+    <%= f.label :wa9tesh %><br />
+    <%= f.text_field :wa9tesh %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,63 @@
+<div id="show-video">
+  
+
+
+
+        <div id="video">
+            <div class="title">
+                <h5><%= link_to @videography.title, @videography %></h5>
+            </div>
+
+            <div class="youtube">
+                <iframe width="900" height="655" src="//www.youtube.com/embed/<%= @videography.code %>" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="credits">
+                <div class="time">
+                    Ajouté par Hedy a <%= @videography.created_at %>
+                </div>
+
+                <div class="where">
+                    <%= @videography.ayna %> - <%= @videography.wa9tesh %>
+                    
+                </div>
+
+                <div class="share">
+                    <a href="#" 
+                      onclick="
+                        window.open(
+                          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://5.135.145.148:8080<%= videography_path(@videography) %>'), 
+                          'facebook-share-dialog', 
+                          'width=626,height=436'); 
+                        return false;">
+                      <%= image_tag "fb.png" %>
+                    </a>
+                </div>
+
+            </div>
+        </br>
+
+            <div class="description">
+                <%= @videography.description %>
+            </div>
+        </br>
+
+            <div class="comments">
+                <fb:comments href="http://5.135.145.148:8080/" colorscheme="The color scheme used in the plugin" numposts="5" width="900"></fb:comments>
+            </div>
+
+        </div>
+
+
+
+
+</div>
+
+</br>
+
+
+LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-4.0.19/buildout/apache2/mod_passenger.so
+   PassengerRoot /var/lib/gems/1.8/gems/passenger-4.0.19
+   PassengerDefaultRuby /usr/bin/ruby1.8
+
+   213.186.33.5

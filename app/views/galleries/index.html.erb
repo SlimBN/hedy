@@ -1,0 +1,62 @@
+            <!--start section title-->
+            <div id="section-title">
+                <h1>Les visions ephemeres</h1>
+                <h1>au travers d'un objectif...</h1>
+            </div>
+
+            
+            <!--start content left-->
+            <div id="content-inner-blog-grid">
+                <div id="blog-grid-container">
+
+    <!--start content-->
+    <div id="content-wrapper">
+    
+        <section class="homepage">
+
+<!-- 
+
+<% if user_signed_in? %>
+<div id="new-photo">
+    <%= link_to 'Nouvelle Photo', new_gallery_path %>
+</div>
+<% end %>
+ -->
+<div id="container">
+    <% @galleries.each do |gallery| %>
+    <% size = [1, 2].sample.to_s + [1, 2].sample.to_s %>
+    <div class="box size<%= size %>">
+        <a href="<%= gallery.picture_url().to_s %>" rel="lightbox" data-lightbox="roadtrip">
+            <% if size == "11" %>
+                <%= image_tag gallery.picture_url(:size11).to_s %>
+            <% end %>
+            <% if size == "21" %>
+                <%= image_tag gallery.picture_url(:size21).to_s %>
+            <% end %>
+            <% if size == "12" %>
+                <%= image_tag gallery.picture_url(:size12).to_s %>
+            <% end %>
+            <% if size == "22" %>
+                <%= image_tag gallery.picture_url(:size22).to_s %>
+            <% end %>
+        </a>
+        <div class="overlay">
+            <div class="title">
+                <%= link_to gallery.title, gallery %>
+            </div>
+            <div class="description">
+                <%= gallery.description %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+    $("#container").nested({selector: '.box'});
+</script>
+
+
+<div class="clearfix"></div>

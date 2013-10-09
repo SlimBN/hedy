@@ -1,0 +1,146 @@
+
+   <!--start content-->
+    <div id="content-wrapper">
+    
+        <section class="pages clearfix">        
+        
+            <!--start section title-->
+            <div id="section-title">
+                <h1>Les cogitations d'un</h1>
+                <h1>voyageur...</h1>
+            </div>
+
+            
+            <!--start content left-->
+            <div class="content-inner-left">
+
+
+
+<% Blog.order('created_at DESC').each do |blog| %>
+
+
+                    <article class="blog-post" id="entry-<%= blog.id %>">
+                        <div class="blog-post-content">
+                            <div class="blog-post-featured-media">
+                                 <div class="thumb">
+                                        <%= image_tag blog.cover_url(:blog).to_s, style: "width: 605px; height: auto;" %>
+                                </div>
+                                <div class="blog-post-meta-date">
+                                    <% month_num = blog.created_at.month %>
+                                    <% if month_num = "1" %>
+                                        <% chhar = "Jan" %>
+                                    <% end %>
+                                    <% if month_num = "2" %>
+                                        <% chhar = "Fev" %>
+                                    <% end %>
+                                    <% if month_num = "3" %>
+                                        <% chhar = "Mar" %>
+                                    <% end %>
+                                    <% if month_num = "4" %>
+                                        <% chhar = "Avr" %>
+                                    <% end %>
+                                    <% if month_num = "5" %>
+                                        <% chhar = "Mai" %>
+                                    <% end %>
+                                    <% if month_num = "6" %>
+                                        <% chhar = "Jun" %>
+                                    <% end %>
+                                    <% if month_num = "7" %>
+                                        <% chhar = "Jui" %>
+                                    <% end %>
+                                    <% if month_num = "8" %>
+                                        <% chhar = "Aou" %>
+                                    <% end %>
+                                    <% if month_num = "9" %>
+                                        <% chhar = "Sep" %>
+                                    <% end %>
+                                    <% if month_num = "10" %>
+                                        <% chhar = "Oct" %>
+                                    <% end %>
+                                    <% if month_num = "11" %>
+                                        <% chhar = "Nov" %>
+                                    <% end %>
+                                    <% if month_num = "12" %>
+                                        <% chhar = "Dec" %>
+                                    <% end %>
+                                    <span class="month"><%= chhar %></span>
+                                    <span class="day"><%= blog.created_at.day %></span>
+                                    <span class="year"><%= blog.created_at.year %></span>
+                                </div>
+                            </div>
+                            <h2 class="blog-post-title"><%= blog.title %></h2>
+                            <div class="blog-post-meta">
+                                <%= blog.created_at %> | Rédigé par: <a href="#">Hedy Aounallah Thion</a>
+                            </div>
+                            <p>
+                            <%= blog.content %>
+                            </p>
+
+                            
+                        </div>
+                    </article>
+
+
+<!-- 
+
+  <tr>
+    <td><%= blog.title %></td>
+    <td><%= blog.slug %></td>
+    <td><%= blog.user_id %></td>
+    <td><%= blog.content %></td>
+    <td><%= blog.cover %></td>
+    <td><%= link_to 'Show', blog %></td>
+    <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+    <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+</table> -->
+<% end %>
+
+            
+                <!--start post nav-->
+
+                 
+                </div>
+
+
+                        <!--start sidebar-->
+                <aside class="sidebar left">
+                    <ul>
+                        <!--widget-recent-posts-->
+                        <li class="widget_recent_entries">
+                            <h6 class="widgettitle">Derniers Articles</h6>
+                            <ul>
+                                <% Blog.order('created_at DESC').last(20).each do |blog| %>
+                                <li>
+                                <%= link_to blog.title, "#entry-"+blog.id.to_s %>
+                                <p class="date"><%= blog.created_at.day %>/<%= blog.created_at.month %>/<%= blog.created_at.year %></p>
+                                </li>
+                                <% end %>
+                            </ul>
+                        </li>
+
+                        <!--widget-recent-posts-->
+                        <li class="widget_recent_entries">
+                            <h6 class="widgettitle">Dernieres Videos</h6>
+                            <ul>
+                                <% Videography.order('created_at DESC').last(20).each do |video| %>
+                                <li>
+                                <%= link_to video.title, video %>
+                                <p class="date"><%= video.created_at.day %>/<%= video.created_at.month %>/<%= video.created_at.year %></p>
+                                </li>
+                                <% end %>
+                            </ul>
+                        </li>
+
+
+
+
+                    
+                    </ul>
+                </aside>      
+
+
+    
+    </div>
+

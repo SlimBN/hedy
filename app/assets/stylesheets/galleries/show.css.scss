@@ -1,0 +1,27 @@
+#gallery_image_show {
+	img {
+		width: 870px;
+		height: auto;
+	}
+}
+
+#gallery_image_show_description {
+	width: 870px;
+
+	margin-top: 20px;
+
+	font-size: 22px;
+	font-family: "photograph";
+	
+	&:before {
+		content: '"';
+		font-size: 80px;
+		font-family: 'alex';
+	}
+
+	&:after {
+		content: '"';
+		font-size: 80px;
+		font-family: 'alex';
+	}
+}

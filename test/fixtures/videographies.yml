@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  embed: MyText
+  code: MyString
+  description: MyText
+  ayna: MyString
+  wa9tesh: MyString
+
+two:
+  title: MyString
+  embed: MyText
+  code: MyString
+  description: MyText
+  ayna: MyString
+  wa9tesh: MyString
