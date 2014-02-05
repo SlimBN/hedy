@@ -1,5 +1,10 @@
 Hedy::Application.routes.draw do
-  resources :videographies
+
+
+  resources :photos
+
+
+  resources :albums
 
 
   root :to => 'homes#index'
@@ -19,6 +24,7 @@ Hedy::Application.routes.draw do
 
   resources :blogs
 
+  resources :videographies
 
   resources :contacts
 

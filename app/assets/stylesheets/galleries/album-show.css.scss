@@ -1,0 +1,20 @@
+#album-photos {
+	width: 900px;
+
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+	text-align: center;
+
+
+	.photo {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+#album-show-description {
+	font-family: "linowrite";
+	font-size: 28px;
+	line-height: 34px;
+}

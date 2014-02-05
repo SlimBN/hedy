@@ -1,0 +1,43 @@
+<%= nested_form_for @album, :html => {:multipart => true} do |f| %>
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+      <ul>
+      <% @album.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if user_signed_in? %>
+    afafaf 
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+
+    </br>
+
+    <%= f.fields_for :photos do |task_form| %>
+
+      <%= task_form.text_field :title %></br>
+
+      <%= task_form.file_field :file %>
+      <%= task_form.link_to_remove "Enlever cette photo" %>
+      </br>
+      </br>
+    <% end %>
+    <p><%= f.link_to_add "Ajouter une photo", :photos %></p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

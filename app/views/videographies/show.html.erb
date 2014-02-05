@@ -26,7 +26,7 @@
                     <a href="#" 
                       onclick="
                         window.open(
-                          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://5.135.145.148:8080<%= videography_path(@videography) %>'), 
+                          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://hedyaounallah-thion.com/<%= videography_path(@videography) %>'), 
                           'facebook-share-dialog', 
                           'width=626,height=436'); 
                         return false;">
@@ -43,7 +43,7 @@
         </br>
 
             <div class="comments">
-                <fb:comments href="http://5.135.145.148:8080/" colorscheme="The color scheme used in the plugin" numposts="5" width="900"></fb:comments>
+                <div class="fb-comments" data-href="http://hedyaounallah-thion.com/<%= videography_path(@videography) %>" data-colorscheme="The color scheme used in the plugin" data-numposts="5" data-width="900"></div>
             </div>
 
         </div>
@@ -56,8 +56,3 @@
 </br>
 
 
-LoadModule passenger_module /var/lib/gems/1.8/gems/passenger-4.0.19/buildout/apache2/mod_passenger.so
-   PassengerRoot /var/lib/gems/1.8/gems/passenger-4.0.19
-   PassengerDefaultRuby /usr/bin/ruby1.8
-
-   213.186.33.5

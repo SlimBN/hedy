@@ -1,0 +1,31 @@
+<!--start section title-->
+<div id="section-title">
+  <h1>Les visions éphémères</h1>
+  <h1>à travers un objectif...</h1>
+</div>
+
+<div id="albums_container">
+  
+
+<% @albums.each do |album| %>
+
+  <div id="album">
+    <div class="title">
+      <%= link_to album.title, album %>
+    </div>
+    
+    <% album.photos.last(1).each do |photo| %>
+    <div class="cover">
+      <a href="<%= album_path(album) %>"><%= image_tag photo.file_url(:albumindex).to_s %></a>
+    </div>
+    <% end %>
+
+    <div class="description">
+      <%= album.description %>
+    </div>
+    
+  </div>
+
+<% end %>
+
+</div>
