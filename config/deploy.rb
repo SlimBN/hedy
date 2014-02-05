@@ -22,4 +22,4 @@ end
 set :stage, :production
 
 # Replace 127.0.0.1 with your server's IP address!
-server 'vps46438.ovh.net', user: 'root', roles: %w{web app}
+server '37.187.70.117', user: 'root', roles: %w{web app}
