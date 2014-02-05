@@ -27,7 +27,7 @@ server '37.187.70.117', user: 'root', roles: %w{web app}, my_property: :my_value
 #    auth_methods: %w(password)
 #  }
 set :ssh_options, {
- keys: %w(/home/deploy/.ssh/id_rsa)
+ keys: %w(/home/root/.ssh/id_rsa)
 }
 # and/or per server
 # server 'example.com',
