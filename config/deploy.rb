@@ -17,7 +17,7 @@ namespace :deploy do
 
   after :finishing, 'deploy:cleanup'
 end
-Now we need to open up our config/deploy/production.rb file to set the server IP address that we want to deploy to:
+#Now we need to open up our config/deploy/production.rb file to set the server IP address that we want to deploy to:
 
 set :stage, :production
 
